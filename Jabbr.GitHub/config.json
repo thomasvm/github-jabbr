@@ -1,0 +1,10 @@
+﻿{
+    default: {
+        jabbr: "http://yourjabbbr.net",
+        rooms: [ "roomA" ],
+        userid: "achieved through /who yourusername"        
+    },
+    "github": {
+        rooms: [ "roomA", "roomB" ]
+    }
+}
