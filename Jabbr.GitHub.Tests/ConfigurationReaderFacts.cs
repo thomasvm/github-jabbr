@@ -14,17 +14,7 @@ namespace Jabbr.GitHub.Tests
 
             public GetCommand()
             {
-                Reader = new ConfigurationReader(new JsonDeserializer(),
-                    @" {
-                            default: {
-                                jabbr: ""http://yourjabbbr.net"",
-                                rooms: [ ""roomA"" ],
-                                userid: ""achieved through /who yourusername""        
-                            },
-                            ""repo-a"": {                                
-                                rooms: [ ""roomA"", ""roomB"" ]
-                            }
-                        }");
+                Reader = Defaults.DefaultConfig;
             }
 
             [Fact]
@@ -32,7 +22,6 @@ namespace Jabbr.GitHub.Tests
             {
                 Reader.GetCommand("repo-a");
             }
-
         }
     }
 }

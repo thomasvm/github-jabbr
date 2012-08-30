@@ -69,5 +69,7 @@ namespace Jabbr.GitHub.Tests
   ""after"": ""de8251ff97ee194a289832576287d6f8ad74e3d0"",
   ""ref"": ""refs/heads/master""
 }";
+
+        public static TemplateRender TemplateRenderer = new TemplateRender(@"..\..\Jabbr.GitHub\Templates");
     }
 }

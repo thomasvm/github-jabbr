@@ -13,11 +13,15 @@ namespace Jabbr.GitHub.Tests
         public class GitHub
         {
             protected Browser Browser { get; set; }
-            
+
             [Fact]
             public void WithPayLoad_Succeeds()
             {
-                var browser = Defaults.Browser(with => with.Dependency<ConfigurationReader>(Defaults.DefaultConfig));
+                var browser = Defaults.Browser(with =>
+                                                   {
+                                                       with.Dependency<ConfigurationReader>(Defaults.DefaultConfig);
+                                                       with.Dependency<TemplateRender>(Defaults.TemplateRenderer);
+                                                   });
 
                 var result = browser.Post("/github",
                                           (with) =>

@@ -12,7 +12,7 @@ namespace Jabbr.GitHub
         private JsonDeserializer deserializer;
         public dynamic Value { get; private set; }
 
-        private const string DEFAULTTEMPLATE = "@Model.repository.name";
+        private const string DEFAULTTEMPLATE = "Default.cshtml";
 
         public ConfigurationReader(JsonDeserializer deserializer)
         {

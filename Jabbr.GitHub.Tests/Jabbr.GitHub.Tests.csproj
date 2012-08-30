@@ -61,6 +61,7 @@
     <Compile Include="ConfigurationReaderFacts.cs" />
     <Compile Include="Defaults.cs" />
     <Compile Include="GitHubModuleFacts.cs" />
+    <Compile Include="JsonDeserializerFacts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
