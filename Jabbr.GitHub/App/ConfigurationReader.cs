@@ -9,33 +9,30 @@ namespace Jabbr.GitHub
 {
     public class ConfigurationReader
     {
-        private JsonDeserializer deserializer;
         public dynamic Value { get; private set; }
 
         private const string DEFAULTTEMPLATE = "Default.cshtml";
 
-        public ConfigurationReader(JsonDeserializer deserializer)
+        public ConfigurationReader()
         {
-            this.deserializer = deserializer;
             string path = "config.json";
 
             if (HttpContext.Current != null)
                 path = HttpContext.Current.Request.MapPath("~/config.json");
 
             string content = File.ReadAllText(path);
-            Value = deserializer.Convert(content);
+            Value = Json.Convert(content);
         }
 
-        public ConfigurationReader(JsonDeserializer deserializer, string content)
+        public ConfigurationReader(string content)
         {
-            this.deserializer = deserializer;
-            Value = deserializer.Convert(content);
+            Value = Json.Convert(content);
         }
 
         public JabbrCommand GetCommand(string repo)
         {
-            dynamic @default = Value.@default ?? deserializer.Convert("{}");
-            dynamic specific = Value[repo] ?? deserializer.Convert("{}");
+            dynamic @default = Value.@default ?? Json.Convert("{}");
+            dynamic specific = Value[repo] ?? Json.Convert("{}");
 
             if(@default == null && specific == null)
                 throw new InvalidOperationException("Invalid configuration");

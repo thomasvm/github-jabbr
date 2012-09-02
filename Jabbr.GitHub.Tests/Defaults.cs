@@ -14,8 +14,7 @@ namespace Jabbr.GitHub.Tests
             return new Browser(bootstrapper);
         }
 
-        public static ConfigurationReader DefaultConfig = new ConfigurationReader(new JsonDeserializer(),
-               @"
+        public static ConfigurationReader DefaultConfig = new ConfigurationReader(@"
 {
     default: {
         jabbr: ""http://yourjabbbr.net"",
@@ -70,6 +69,6 @@ namespace Jabbr.GitHub.Tests
   ""ref"": ""refs/heads/master""
 }";
 
-        public static TemplateRender TemplateRenderer = new TemplateRender(@"..\..\Jabbr.GitHub\Templates");
+        public static TemplateRender TemplateRenderer = new TemplateRender(@"..\..\..\Jabbr.GitHub\Templates");
     }
 }

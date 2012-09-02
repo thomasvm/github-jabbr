@@ -13,15 +13,13 @@ namespace Jabbr.GitHub.Tests
             [Fact]
             public void Succeeds()
             {
-                var serializer = new JsonDeserializer();
-                dynamic payload = serializer.Convert(Defaults.ExamplePayload);
+                dynamic payload = Json.Convert(Defaults.ExamplePayload);
             }
 
             [Fact]
             public void HasRepositoryInfo()
             {
-                var serializer = new JsonDeserializer();
-                dynamic payload = serializer.Convert(Defaults.ExamplePayload);
+                dynamic payload = Json.Convert(Defaults.ExamplePayload);
 
                 Assert.Equal("github", payload.repository.name);
             }
@@ -29,8 +27,7 @@ namespace Jabbr.GitHub.Tests
             [Fact]
             public void HasCommits()
             {
-                var serializer = new JsonDeserializer();
-                dynamic payload = serializer.Convert(Defaults.ExamplePayload);
+                dynamic payload = Json.Convert(Defaults.ExamplePayload);
 
                 Assert.Equal(2, payload.commits.Length);
             }

@@ -19,6 +19,8 @@ namespace Jabbr.GitHub
 
         public string UserId { get; set; }
 
+        public string Message { get; set; }
+
         public JabbrCommand()
         {
             Rooms = new List<string>();
@@ -26,14 +28,23 @@ namespace Jabbr.GitHub
 
         public void Validate()
         {
-            if(string.IsNullOrEmpty(Host))
+            if (string.IsNullOrEmpty(Host))
                 throw new ConfigException("No host specified");
 
-            if(string.IsNullOrEmpty(Username) && string.IsNullOrEmpty(UserId))
+            if (string.IsNullOrEmpty(Username) && string.IsNullOrEmpty(UserId))
                 throw new ConfigException("No username or userid specified");
 
-            if(!Rooms.Any())
+            if (!Rooms.Any())
                 throw new ConfigException("No rooms specified");
+        }
+
+        public IList<string> GetMessages()
+        {
+            var messages = Message.Split('\n')
+                .Where(s => !string.IsNullOrWhiteSpace(s))
+                .ToList();
+
+            return messages;
         }
     }
 }

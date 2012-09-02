@@ -90,7 +90,9 @@
   <ItemGroup>
     <Compile Include="App\ConfigException.cs" />
     <Compile Include="App\ConfigurationReader.cs" />
-    <Compile Include="App\JsonDeserializer.cs" />
+    <Compile Include="App\IJabbrSend.cs" />
+    <Compile Include="App\JabbrSend.cs" />
+    <Compile Include="App\Json.cs" />
     <Compile Include="Modules\GitHubModule.cs" />
     <Compile Include="App\JabbrCommand.cs" />
     <Compile Include="Templates\TemplateRender.cs" />
@@ -106,6 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Templates\Default.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Templates\Detailed.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

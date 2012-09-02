@@ -8,9 +8,9 @@ using Nancy;
 
 namespace Jabbr.GitHub
 {
-    public class JsonDeserializer
+    public static class Json
     {
-        public dynamic Convert(string json)
+        public static dynamic Convert(string json)
         {
             return System.Web.Helpers.Json.Decode(json);
         }

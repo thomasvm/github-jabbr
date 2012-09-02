@@ -1,0 +1,5 @@
+﻿@Model.commits.Length commits pushed to [@Model.repository.owner.name/@Model.repository.name] 
+@foreach(dynamic commit in Model.commits) {
+@: [@commit.author.name]: @commit.message
+@: @commit.url
+}
