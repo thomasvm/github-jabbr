@@ -2,7 +2,7 @@
     default: {
         jabbr: "http://yourjabbbr.net",
         rooms: [ "roomA" ],
-        userid: "achieved through /who yourusername"        
+        userid: "can be found back in the jabbr.state cookie"        
     },
     "github": {
         rooms: [ "roomA", "roomB" ]
