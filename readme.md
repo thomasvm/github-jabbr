@@ -1,5 +1,5 @@
 ## github-jabbr
-Toss your github pushes to a [Jabbr](https://github.com/davidfowl/JabbR) instance
+Toss your github pushes to a [Jabbr](https://github.com/davidfowl/JabbR) instance. A Nancy app for handling GitHub [post receive hooks](the https://help.github.com/articles/post-receive-hooks)
 
 ###instructions
 * git clone this repository
