@@ -23,8 +23,8 @@ Toss your github pushes to a [Jabbr](https://github.com/davidfowl/JabbR) instanc
   it will receive a dynamic object containing the [payload](https://help.github.com/articles/post-receive-hooks)
 * Open Solution in Visual Studio and F5
 
-Next configure your github repository for a Post-Receive hook, we can receive payload on the `/github` path
-![configure github](https://raw.github.com/thomasvm/github-jabbr/master/doc/configure.png)
+Next configure your github repository for a Post-Receive hook, we can receive payload on the `/github`t path
+![configure github](https://raw.github.com/thomasvm/github-jabbr/master/doc/configuration.png)
 
 ###appharbor
 This project run on the awesome [AppHarbor](http://appharbor.com/), simply clone, adjust the config and push
