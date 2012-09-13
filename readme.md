@@ -27,7 +27,7 @@ Next configure your github repository for a Post-Receive hook, we can receive pa
 ![configure github](https://raw.github.com/thomasvm/github-jabbr/master/doc/configuration.png)
 
 ###appharbor
-This project run on the awesome [AppHarbor](http://appharbor.com/), simply clone, adjust the config and push
+This project runs on the awesome [AppHarbor](http://appharbor.com/), simply clone, adjust the config and push
 
 ###what i used
 * [Nancy](http://nancyfx.org/), a perfect match for this project
