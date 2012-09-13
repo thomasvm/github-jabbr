@@ -33,3 +33,5 @@ This project run on the awesome [AppHarbor](http://appharbor.com/), simply clone
 * [Nancy](http://nancyfx.org/), a perfect match for this project
 * [Jabbr.Client](https://github.com/davidfowl/JabbR.Client), so I didn't have to care about the protocol
 * [RazorEngine](http://razorengine.codeplex.com/), for easy rendering of the payload
+
+Inspiration: [github-campfire](https://github.com/jnewland/github-campfire/)
